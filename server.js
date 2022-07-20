@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
 
 const app = express();
-const PORT = process.env.port || 3001
+const PORT = process.env.port || 4001
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -28,10 +28,10 @@ app.post('/api/notes', (req, res) => {
     if (title && text) {
         const newNote = {
             title,
-            text,
-            note_id: uuidv4(),
+            text
         };
 
+        newNote.id = uuidv4();
         const response = {
             status: 'success',
             body: newNote,
@@ -46,6 +46,19 @@ app.post('/api/notes', (req, res) => {
     } else {
         res.status(500).json('Error occurred, note was unable to post. Title and text are required.')
     }
+});
+
+app.delete("/api/notes/:id", (req, res) => {
+    const selectedNote = req.params.id
+    console.log(selectedNote);
+    
+    const index = data.findIndex((note) => note.id === parseInt(selectedNote));
+
+    data.splice(index, 1);
+
+    fs.writeFile(__dirname + "/db/db.json", JSON.stringify((data), null, 4), "utf8", () => {
+        res.json(data);
+    })
 });
 
 app.listen(PORT, () =>
