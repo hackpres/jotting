@@ -57,7 +57,7 @@ app.delete("/api/notes/:id", (req, res) => {
     const selectedNote = req.params.id
     console.log(selectedNote);
     
-    const index = data.findIndex((note) => note.id === parseInt(selectedNote));
+    const index = data.findIndex((note) => note.id === selectedNote);
 
     data.splice(index, 1);
 
