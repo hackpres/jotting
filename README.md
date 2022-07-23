@@ -1,5 +1,5 @@
 
-# jotting.
+# Jotting.
 
 ![license badge](https://img.shields.io/badge/license-isc-brightgreen)
 
@@ -12,9 +12,9 @@ Jotting is a note taking app designed with simple express commands within node. 
 
 <img src="/Assets/images/postCode.png" width="800"/><br/>
 <img src="/Assets/images/deleteCode.png" width="800"/><br/>
-<img src="/Assets/images/portCode.png" width="800"/><br/>
-<img src="/Assets/images/listenCode.png" width="800"/><br/>
-<img src="/Assets/images/uuidCode.png" width="800"/>
+<img src="/Assets/images/portCode.png" width="700"/><br/>
+<img src="/Assets/images/listenCode.png" width="700"/><br/>
+<img src="/Assets/images/uuidCode.png" width="425"/>
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ Jotting is a note taking app designed with simple express commands within node. 
 
 ### Usage
 <a name="usage"/>
-Access Jotting via jotting-notes.herokuapp.com/<br/>
+Access Jotting via <a href="https://jotting-notes.herokuapp.com/">https://jotting-notes.herokuapp.com</a><br/><br/>
 
 <img src="/Assets/images/noteBuilding.png" width="800"/><br/>
 <img src="/Assets/images/noteSaved.png" width="800"/>
